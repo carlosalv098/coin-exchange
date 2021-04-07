@@ -34,7 +34,7 @@ export default class Coin extends Component {
                 <Td>{this.props.ticker}</Td>
                 <Td>${this.state.price}</Td>
                 <Td>
-                    <form method="POST">
+                    <form action='#' method="POST">
                         <button onClick={this.handleClick}>Refresh</button>
                     </form>
                 </Td>
