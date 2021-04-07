@@ -1,6 +1,7 @@
 import './App.css';
 import logo from './logo.svg';
-import Coin from './components/Coin/Coin.jsx';
+import Coin from './components/Coin/Coin';
+import AccountBalance from './components/AccountBalance/AccountBalance';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <img className="App-logo" src={logo} alt='React Logo'/>
         <h1 className="App-title">Coin Exchange</h1>
       </header>
+      <AccountBalance balance={10000}/>
       <table className="Coin-table">
         <thead>
           <tr>
