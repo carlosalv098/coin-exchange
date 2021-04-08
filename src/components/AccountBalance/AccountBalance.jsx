@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import './AccountBalance.css';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -11,11 +10,17 @@ const P = styled.p`
 
 export default class AccountBalance extends Component {
     render() {
+        const buttonText = this.props.showBalance ? 'Hide Balance': 'Show Balance';
+        let content = null;
+        if ( this.props.showBalance ) {
+            content = <>Balance: ${this.props.balance}</>
+        }
         return (
             <P>
-                Balance: ${this.props.balance}
+                {content}
+                <button onClick={this.props.handleBalanceVisibilityChange}>{buttonText}</button>
             </P>
-        )
+        );
     }
 }
 
